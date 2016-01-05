@@ -1,0 +1,15 @@
+<template name="lists">
+  <h2>Lists</h2>
+  {{> addList}}
+  <ul>
+    {{#if Template.subscriptionsReady}}
+      {{#each list}}
+        <li>
+          <a href="{{pathFor route='list'}}">{{name}}</a>
+        </li>
+      {{/each}}
+    {{else}}
+      <li>Loading...</li>
+    {{/if}}
+  </ul>
+</template>

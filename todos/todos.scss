@@ -1,0 +1,54 @@
+ul {
+  list-style: none;
+
+  &.navigation {
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+  }
+}
+
+input.error {
+  background-color: #FFE7E7;
+}
+label.error{
+  color: #904F4F;
+  padding-left: .5rem;
+}
+
+.todos {
+  [name=todoItem] {
+    border: none;
+    padding: .15rem;
+
+    &:hover {
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+    &:focus {
+      background-color: #f9f9f9;
+      cursor: default;
+      outline: none;
+    }
+  }
+
+  ul {
+    .checked {
+      background-color: #f0f0f0;
+      color: #666;
+
+      [name=todoItem] {
+        text-decoration: line-through;
+
+        &,
+        &:hover,
+        &:focus {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+}
