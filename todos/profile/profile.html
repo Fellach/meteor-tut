@@ -1,8 +1,8 @@
 <template name="profile">
   <h3>Profile</h3>
   <form action="" class="profile">
-    <p>Old password: <input type="password" name="old"></p>
-    <p>New password: <input type="password" name="new"></p>
-    <button type="submit">Save</button>
+    <p>Old password: <input type="password" name="old" required="" aria-required="true" class="validate"></p>
+    <p>New password: <input type="password" name="new" minlength="6" required="" aria-required="true" class="validate"></p>
+    <button class="waves-effect waves-light btn" type="submit">Save</button>
   </form>
 </template>

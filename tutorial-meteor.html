@@ -5,25 +5,35 @@
 <body></body>
 
 <template name="main">
-  <header>
-    <h1>Todos</h1>
-    <nav>
-      {{> navigation}}
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Todos</h1>
+      <nav>
+        {{> navigation}}
+      </nav>
+    </header>
 
-  {{#if currentUser}}
-    <aside>
-      {{> lists}}
-    </aside>
-  {{/if}}
-  
-  <main>
-    {{> yield}}
-  </main>
-  <footer>
-    <p>Tutorial from <a href="http://meteortips.com/second-meteor-tutorial/">meteortips.com</a>, by Marcin Feleniak</p>
-  </footer>
+    <div class="row">
+      {{#if currentUser}}
+        <aside class="col s4">
+          <div >
+            {{> lists}}
+          </div>
+        </aside>
+      {{/if}}
+
+      <main class="col {{#if currentUser }} s8 {{else}} s6 offset-s3 {{/if}}">
+        <div class="card-panel">
+          {{> yield}}
+        </div>
+      </main>
+    </div>
+
+    <div class="divider"></div>
+    <footer class="section">
+      <p>Tutorial from <a href="http://meteortips.com/second-meteor-tutorial/">meteortips.com</a>, by Marcin Feleniak</p>
+    </footer>
+  </div>
 </template>
 
 <template name="navigation">

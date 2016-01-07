@@ -1,9 +1,11 @@
 <template name="todoItem">
-  <li class="{{checked}}">
-    <input type="checkbox" {{checked}}>
-    <input name="todoItem" value="{{name}}" type="text">
-    <a href class="delete-todo">
-      <i class="mdi mdi-delete"></i>
-    </a>
+  <li class="{{checked}} hoverable">
+    <input type="checkbox" class="filled-in" id="{{_id}}" {{checked}} />
+    <label for="{{_id}}">
+      <input name="todoItem" value="{{name}}" type="text">
+      <a href class="delete-todo">
+        <i class="mdi mdi-delete"></i>
+      </a>
+    </label>
   </li>
 </template>

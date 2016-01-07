@@ -20,15 +20,6 @@ const profile = {
 
   onRendered() {
     const validator = $('.profile').validate({
-      rules: {
-        'old': {
-          required: true,
-        },
-        'new': {
-          required: true,
-          minlength: 6,
-        },
-      },
       submitHandler() {
         Accounts.changePassword(
           $('[name=old]').val(),
